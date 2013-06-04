@@ -57,9 +57,9 @@ class GoodPracticeExample(models.Model):
     For translatable fields see ``GoodPracticeExampleTranslation``.
 
     :description: The description of the good practice.
-    :goal: The goals of this practice.
-    :sector: The sector of this practice.
-    :country: The country this practice takes place.
+    :goals: The goals of this practice.
+    :sectors: The sectors of this practice.
+    :countries: The countries this practice takes place.
 
     """
     placeholders = M2MPlaceholderField(
