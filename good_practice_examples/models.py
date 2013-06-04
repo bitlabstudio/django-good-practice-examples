@@ -3,6 +3,7 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
 from django_countries.fields import CountryField
+from django_libs.models_mixins import SimpleTranslationPublishedManager
 from djangocms_utils.fields import M2MPlaceholderField
 from simple_translation.actions import SimpleTranslationPlaceholderActions
 
@@ -41,7 +42,6 @@ class GoalTranslation(models.Model):
     goal = models.ForeignKey(
         'good_practice_examples.Goal',
         verbose_name=_('Goal'),
-        related_name='translations',
     )
 
     language = models.CharField(
@@ -82,6 +82,8 @@ class GoodPracticeExample(models.Model):
         verbose_name=_('Countries'),
     )
 
+    objects = SimpleTranslationPublishedManager()
+
 
 class GoodPracticeExampleTranslation(models.Model):
     """
@@ -105,7 +107,6 @@ class GoodPracticeExampleTranslation(models.Model):
     good_practice_example = models.ForeignKey(
         'good_practice_examples.GoodPracticeExample',
         verbose_name=_('Good practice example'),
-        related_name='translations',
     )
     language = models.CharField(
         verbose_name=_('Language'),
@@ -139,7 +140,6 @@ class SectorTranslation(models.Model):
     sector = models.ForeignKey(
         'good_practice_examples.Sector',
         verbose_name=_('Sector'),
-        related_name='translations',
     )
 
     language = models.CharField(
