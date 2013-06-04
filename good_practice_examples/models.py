@@ -120,6 +120,7 @@ class GoodPracticeExampleTranslation(models.Model):
         'good_practice_examples.GoodPracticeExample',
         verbose_name=_('Good practice example'),
     )
+
     language = models.CharField(
         verbose_name=_('Language'),
         max_length=5,
