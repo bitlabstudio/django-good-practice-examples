@@ -1,0 +1,9 @@
+include AUTHORS
+include LICENSE
+include DESCRIPTION
+include CHANGELOG.txt
+include README.md
+graft good_practice_examples
+global-exclude *.orig *.pyc *.log *.swp
+prune good_practice_examples/tests/coverage
+prune good_practice_examples/.ropeproject
