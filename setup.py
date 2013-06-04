@@ -27,9 +27,11 @@ setup(
         'Django>=1.4.3',
         'South',
         'django-libs',
-        'django-cms',
         'simple-translation',
         'Pillow',
+        'django-cms',
+        'djangocms_utils',
+        'django-countries',
     ],
     tests_require=[
         'fabric',
