@@ -3,7 +3,10 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
 from django_countries.fields import CountryField
-from django_libs.models_mixins import SimpleTranslationPublishedManager
+from django_libs.models_mixins import (
+    SimpleTranslationMixin,
+    SimpleTranslationPublishedManager,
+)
 from djangocms_utils.fields import M2MPlaceholderField
 from simple_translation.actions import SimpleTranslationPlaceholderActions
 
@@ -17,14 +20,20 @@ class Country(models.Model):
     """
     country = CountryField()
 
+    def __unicode__(self):
+        return self.country
 
-class Goal(models.Model):
+
+class Goal(SimpleTranslationMixin, models.Model):
     """
     Holds information about the goal of the practice.
 
     For translatable fields see ``GoalTranslation``.
 
     """
+
+    def __unicode__(self):
+        return self.get_translation().name
 
 
 class GoalTranslation(models.Model):
@@ -50,7 +59,7 @@ class GoalTranslation(models.Model):
     )
 
 
-class GoodPracticeExample(models.Model):
+class GoodPracticeExample(SimpleTranslationMixin, models.Model):
     """
     Contains the information about a certain practice.
 
@@ -84,6 +93,9 @@ class GoodPracticeExample(models.Model):
 
     objects = SimpleTranslationPublishedManager()
 
+    def __unicode__(self):
+        return self.get_translation().title
+
 
 class GoodPracticeExampleTranslation(models.Model):
     """
@@ -114,14 +126,15 @@ class GoodPracticeExampleTranslation(models.Model):
     )
 
 
-class Sector(models.Model):
+class Sector(SimpleTranslationMixin, models.Model):
     """
     Holds information about the sector of the practice.
 
     For translatable fields see ``SectorTranslation``.
 
     """
-    pass
+    def __unicode__(self):
+        return self.get_translation().name
 
 
 class SectorTranslation(models.Model):
