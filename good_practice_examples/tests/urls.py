@@ -13,5 +13,6 @@ admin.autodiscover()
 
 urlpatterns = patterns(
     '',
+    url(r'^$', include('good_practice_examples.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )

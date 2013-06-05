@@ -75,11 +75,14 @@ EXTERNAL_APPS = [
     'django.contrib.sites',
     'django_nose',
     'cms',
+    'cms.plugins.text',
     'mptt',
     'simple_translation',
+    'cmsplugin_blog',
 ]
 
 INTERNAL_APPS = [
+    'good_practice_examples.tests.test_app',
     'good_practice_examples',
 ]
 
@@ -98,3 +101,7 @@ CMS_FRONTEND_LANGUAGES = ('en', 'de', )
 CMS_TEMPLATES = (
     ('standard.html', 'Standard'),
 )
+
+JQUERY_JS = 'https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js'
+JQUERY_UI_JS = 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js'  # NOQA
+JQUERY_UI_CSS = 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/smoothness/jquery-ui.css'  # NOQA

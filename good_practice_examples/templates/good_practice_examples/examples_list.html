@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load i18n simple_translation_tags cms_tags%}
+{% load url from future %}
+
+{% block main %}
+<h1>{% trans "Good practice examples" %}</h1>
+
+{% for example in object_list %}
+    {% include "good_practice_examples/partials/example_item.html" %}
+{% empty %}
+	<p>{% trans "No good practice examples found." %}</p>
+{% endfor %}
+{% endblock %}

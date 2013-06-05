@@ -1,0 +1,27 @@
+{% load i18n simple_translation_tags %}
+{% load url from future %}
+
+{% with example|get_preferred_translation_from_request:request as example_trans %}
+<p>
+    {% for sector in example.sectors.all %}
+        <span>{{ sector }}{% if not forloop.last %}, {% endif %}</span>
+    {% endfor %} /
+    {% for country in example.countries.all %}
+        <span>{{ country }}{% if not forloop.last %}, {% endif %}</span>
+    {% endfor %}
+</p>
+
+<h3>{{ example_trans.title }}</h3>
+{% for placeholder in example.placeholders.all %}
+    {% for plugin in placeholder.cmsplugin_set.all %}
+        <p>{{ plugin.render_plugin }}</p>
+    {% endfor %}
+{% endfor %}
+<hr>
+<h4>{% trans "Goals" %}</h4>
+<ul>
+    {% for goal in example.goals.all %}
+        <li>{{ goal }}{% if not forloop.last %}, {% endif %}</li>
+    {% endfor %}
+</ul>
+{% endwith %}

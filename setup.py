@@ -32,6 +32,7 @@ setup(
         'django-cms',
         'djangocms_utils',
         'django-countries',
+        'cmsplugin_blog',
     ],
     tests_require=[
         'fabric',
