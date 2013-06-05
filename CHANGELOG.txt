@@ -1,5 +1,7 @@
 === ongoing ===
 
+- Added goals, sectors and countries to the context of the
+  GoodPracticeExampleListView
 
 === 0.2 ===
 
