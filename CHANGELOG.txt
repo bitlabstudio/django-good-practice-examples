@@ -1,5 +1,8 @@
 === ongoing ===
 
+
+=== 0.2.1 ===
+
 - Added goals, sectors and countries to the context of the
   GoodPracticeExampleListView
 
