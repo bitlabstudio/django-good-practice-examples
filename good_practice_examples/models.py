@@ -21,7 +21,7 @@ class Country(models.Model):
     country = CountryField()
 
     def __unicode__(self):
-        return self.country
+        return self.country.code
 
 
 class Goal(SimpleTranslationMixin, models.Model):
