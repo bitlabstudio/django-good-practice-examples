@@ -1,5 +1,8 @@
 === ongoing ===
 
+
+=== 0.2.2 ===
+
 - Exchanged dependency of cmsplugin-blog for django-multilingual-news
 
 === 0.2.1 ===
