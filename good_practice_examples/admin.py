@@ -2,7 +2,7 @@
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 
-from cmsplugin_blog.admin import M2MPlaceholderAdmin
+from multilingual_news.admin import M2MPlaceholderAdmin
 from django_libs.admin import MultilingualPublishMixin
 
 from .models import (

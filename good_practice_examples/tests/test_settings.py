@@ -79,7 +79,8 @@ EXTERNAL_APPS = [
     'cms.plugins.text',
     'mptt',
     'simple_translation',
-    'cmsplugin_blog',
+    'filer',
+    'multilingual_news',
 ]
 
 INTERNAL_APPS = [
