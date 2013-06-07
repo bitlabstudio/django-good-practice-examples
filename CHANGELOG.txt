@@ -1,5 +1,8 @@
 === ongoing ===
 
+
+=== 0.2.4 ===
+
 - showing only published examples for each language
 - using correct admin class
 
