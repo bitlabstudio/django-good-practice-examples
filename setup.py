@@ -32,7 +32,7 @@ setup(
         'django-cms',
         'djangocms_utils',
         'django-countries',
-        'django-multilingial-news',
+        'django-multilingual-news',
     ],
     tests_require=[
         'fabric',

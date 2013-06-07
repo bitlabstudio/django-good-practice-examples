@@ -1,6 +1,10 @@
 === ongoing ===
 
 
+=== 0.2.3 ===
+
+- fixed typo in setup.py
+
 === 0.2.2 ===
 
 - Exchanged dependency of cmsplugin-blog for django-multilingual-news
