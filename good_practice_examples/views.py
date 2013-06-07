@@ -24,3 +24,6 @@ class GoodPracticeExampleListView(ListView):
             'sectors': list(set(sectors)),
             'countries': list(set(countries))})
         return ctx
+
+    def get_queryset(self):
+        return GoodPracticeExample.objects.published(self.request)

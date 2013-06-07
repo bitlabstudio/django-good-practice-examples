@@ -1,5 +1,6 @@
 === ongoing ===
 
+- showing only published examples for each language
 - using correct admin class
 
 === 0.2.3 ===
