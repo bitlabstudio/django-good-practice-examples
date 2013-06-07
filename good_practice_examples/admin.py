@@ -4,6 +4,7 @@ from django.utils.translation import ugettext_lazy as _
 
 from multilingual_news.admin import M2MPlaceholderAdmin
 from django_libs.admin import MultilingualPublishMixin
+from simple_translation.admin import TranslationAdmin
 
 from .models import (
     Country,
@@ -13,7 +14,7 @@ from .models import (
 )
 
 
-class GoalAdmin(MultilingualPublishMixin, M2MPlaceholderAdmin):
+class GoalAdmin(TranslationAdmin):
     """Admin class for the ``Goal`` model."""
     list_display = ['name', 'languages']
 
@@ -25,13 +26,14 @@ class GoalAdmin(MultilingualPublishMixin, M2MPlaceholderAdmin):
 class GoodPracticeExampleAdmin(MultilingualPublishMixin, M2MPlaceholderAdmin):
     """Admin class for the ``GoodPracticeExample`` model."""
     list_display = ['title', 'languages', 'is_published']
+    list_filter = ('goals', 'sectors', 'countries')
 
     def title(self, obj):
         return obj.get_translation().title
     title.short_description = _('Title')
 
 
-class SectorAdmin(MultilingualPublishMixin, M2MPlaceholderAdmin):
+class SectorAdmin(TranslationAdmin):
     """Admin class for the ``Sector`` model."""
     list_display = ['name', 'languages']
 

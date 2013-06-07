@@ -1,5 +1,6 @@
 === ongoing ===
 
+- using correct admin class
 
 === 0.2.3 ===
 
