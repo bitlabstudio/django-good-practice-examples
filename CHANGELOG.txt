@@ -1,5 +1,7 @@
 === ongoing ===
 
+- changed placeholder name for GoodPracticeExample description to
+  "practice_desctiption"
 
 === 0.2.4 ===
 

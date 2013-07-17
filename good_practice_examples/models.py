@@ -73,7 +73,7 @@ class GoodPracticeExample(SimpleTranslationMixin, models.Model):
     """
     placeholders = M2MPlaceholderField(
         actions=SimpleTranslationPlaceholderActions(),
-        placeholders=('description', ),
+        placeholders=('practice_description', ),
     )
 
     goals = models.ManyToManyField(
