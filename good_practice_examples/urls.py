@@ -1,5 +1,5 @@
 """URLs for the ``good_practice_examples`` app."""
-from django.conf.urls.defaults import patterns, url
+from django.conf.urls import patterns, url
 
 from .views import GoodPracticeExampleListView
 
