@@ -3,10 +3,14 @@
 from south.utils import datetime_utils as datetime
 from south.db import db
 from south.v2 import DataMigration
+from django.core.exceptions import ObjectDoesNotExist
 from django.db import models
 
 class Migration(DataMigration):
 
+    depends_on = (
+        ('cms', '0058_placeholderref_table_rename'),
+    )
 
     def migrate_placeholder(self, orm, goodpracticeexample, old_slot, new_slot,
                             new_field):
