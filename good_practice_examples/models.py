@@ -6,7 +6,6 @@ from cms.models.fields import PlaceholderField
 from django_countries.fields import CountryField
 from django_libs.models_mixins import HvadPublishedManager
 from hvad.models import TranslatableModel, TranslatedFields
-from simple_translation.actions import SimpleTranslationPlaceholderActions
 
 
 class Country(models.Model):
@@ -35,7 +34,7 @@ class Goal(TranslatableModel):
     )
 
     def __unicode__(self):
-        return self.safe_transaltion_getter('name', 'Untranslated goal')
+        return self.safe_translation_getter('name', 'Untranslated goal')
 
 
 class GoodPracticeExample(TranslatableModel):
