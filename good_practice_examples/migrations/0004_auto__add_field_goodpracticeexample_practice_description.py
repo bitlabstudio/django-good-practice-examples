@@ -8,10 +8,6 @@ from django.db import models
 
 class Migration(SchemaMigration):
 
-    needed_by = (
-        ('document_library', '0021_migrate_placeholders'),
-    )
-
     def forwards(self, orm):
         # Adding field 'GoodPracticeExample.practice_description'
         db.add_column(u'good_practice_examples_goodpracticeexample', 'practice_description',
