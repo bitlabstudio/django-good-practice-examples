@@ -2,6 +2,14 @@
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 
+try:
+    from cms.admin.placeholderadmin import FrontendEditableAdmin
+except ImportError:
+    class Object(object):
+        pass
+    FrontendEditableAdmin = Object
+
+from cms.admin.placeholderadmin import PlaceholderAdmin
 from hvad.admin import TranslatableAdmin
 
 from .models import (
@@ -21,7 +29,8 @@ class GoalAdmin(TranslatableAdmin):
     get_name.short_description = _('Name')
 
 
-class GoodPracticeExampleAdmin(TranslatableAdmin):
+class GoodPracticeExampleAdmin(FrontendEditableAdmin, PlaceholderAdmin,
+                               TranslatableAdmin):
     """Admin class for the ``GoodPracticeExample`` model."""
     list_display = ['get_title', 'all_translations', 'get_is_published']
     list_filter = ('goals', 'sectors', 'countries')
