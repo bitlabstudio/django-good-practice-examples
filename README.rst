@@ -10,7 +10,8 @@ Prerequisites
 You will need to have the following packages installed:
 
 * Django
-* simple-translation
+* django-cms 3 (beta)
+* django-hvad
 * Pillow
 * South
 * django-libs
