@@ -74,11 +74,11 @@ EXTERNAL_APPS = [
     'django.contrib.sitemaps',
     'django.contrib.sites',
     'django_nose',
+    'sekizai',
     'menus',
     'cms',
-    'cms.plugins.text',
     'mptt',
-    'simple_translation',
+    'hvad',
     'filer',
     'multilingual_news',
 ]
