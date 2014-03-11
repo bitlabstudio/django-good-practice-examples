@@ -1,6 +1,10 @@
 === ongoing ===
 
 
+=== 1.0 ===
+
+- updated to django-hvad
+
 === 0.3 ===
 
 - changed placeholder name for GoodPracticeExample description to
